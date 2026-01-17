@@ -1,0 +1,116 @@
+{
+  "name": "promptlint",
+  "displayName": "PromptLint - AI Prompt Refactoring Tool",
+  "description": "Transform messy prompts into clear, structured, high-quality prompts for ChatGPT, Claude & other LLMs. One-click prompt engineering.",
+  "version": "1.0.0",
+  "publisher": "SantanSharma",
+  "author": {
+    "name": "Santan Sharma",
+    "email": "santansh47@gmail.com"
+  },
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SantanSharma/promptlint"
+  },
+  "bugs": {
+    "url": "https://github.com/SantanSharma/promptlint/issues"
+  },
+  "homepage": "https://github.com/SantanSharma/promptlint#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning",
+    "Formatters"
+  ],
+  "keywords": [
+    "prompt",
+    "prompt engineering",
+    "llm",
+    "chatgpt",
+    "claude",
+    "openai",
+    "ai",
+    "refactor",
+    "gpt",
+    "artificial intelligence",
+    "copilot",
+    "prompt optimizer"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "promptlint.refactorPrompt",
+        "title": "PromptLint: Refactor Selected Prompt"
+      },
+      {
+        "command": "promptlint.openPanel",
+        "title": "PromptLint: Open Prompt Editor Panel"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "promptlint.refactorPrompt",
+          "when": "editorHasSelection",
+          "group": "promptlint@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "PromptLint",
+      "properties": {
+        "promptlint.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API Key for the LLM service (OpenAI or Claude compatible)",
+          "scope": "application"
+        },
+        "promptlint.apiEndpoint": {
+          "type": "string",
+          "default": "https://api.openai.com/v1/chat/completions",
+          "description": "API endpoint URL (OpenAI or Claude compatible)",
+          "scope": "application"
+        },
+        "promptlint.model": {
+          "type": "string",
+          "default": "gpt-4",
+          "description": "Model to use for prompt refactoring",
+          "scope": "application"
+        },
+        "promptlint.maxTokens": {
+          "type": "number",
+          "default": 2048,
+          "description": "Maximum tokens for the response",
+          "scope": "application"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
