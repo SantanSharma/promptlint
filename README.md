@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Transform messy prompts into clear, structured, high-quality prompts for LLMs</strong>
+  <strong>Write better prompts, get better AI responses! Instantly transform rough ideas into polished, structured prompts that unlock the full power of ChatGPT, Claude & LLMs.</strong>
 </p>
 
 <p align="center">

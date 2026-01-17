@@ -1,12 +1,12 @@
 {
   "name": "promptlint",
   "displayName": "PromptLint - AI Prompt Refactoring Tool",
-  "description": "Transform messy prompts into clear, structured, high-quality prompts for ChatGPT, Claude & other LLMs. One-click prompt engineering.",
-  "version": "1.0.0",
+  "description": "Write better prompts, get better AI responses! Instantly transform rough ideas into polished, structured prompts that unlock the full power of ChatGPT, Claude & LLMs.",
+  "version": "1.0.2",
   "publisher": "SantanSharma",
   "author": {
     "name": "Santan Sharma",
-    "email": "santansh47@gmail.com"
+    "email": "ltsantan47@gmail.com"
   },
   "license": "MIT",
   "icon": "images/icon.png",
